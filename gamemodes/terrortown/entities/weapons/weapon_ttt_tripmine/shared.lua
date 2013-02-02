@@ -1,6 +1,6 @@
     if SERVER then
        AddCSLuaFile( "shared.lua" )
-       resource.AddFile("VGUI/ttt/icon_tripmine.vmt")
+	   resource.AddFile("materials/VGUI/ttt/icon_tripmine.vmt")
     end
      
     SWEP.HoldType                           = "slam"
@@ -20,7 +20,6 @@
 		  detectives, the mine explodes. Can be shot and
 		  destroyed by innocents and detectives.]]
        };
-     
        SWEP.Icon = "VGUI/ttt/icon_tripmine"
     end
 SWEP.Base = "weapon_tttbase"

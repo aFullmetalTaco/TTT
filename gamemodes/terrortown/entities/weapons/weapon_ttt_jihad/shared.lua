@@ -14,7 +14,9 @@ if CLIENT then
    SWEP.EquipMenuData = {
       type  = "item_weapon",
       name  = "Jihad Bomb",
-      desc  = "Left click to explode your innocent mates, you evil person... Otherwise right click to scare them!"
+      desc  = [[Left click to explode your innocent mates,
+	  you evil person... 
+	  Otherwise right click to scare them!]]
    };
  
 SWEP.Icon = "VGUI/ttt/icon_suicidebomb"
