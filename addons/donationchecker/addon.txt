@@ -1,0 +1,11 @@
+"AddonInfo"
+{
+	"name"		"Donation Checker"
+	"version"	"1.0"
+	"up_date"	""
+	"author_name"	"Ollie"
+	"author_email"	""
+	"author_url"	"None"
+	
+	"info"		"Checks donations..."
+}

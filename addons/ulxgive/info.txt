@@ -1,0 +1,10 @@
+"AddonInfo"
+{
+	"name"		"Give for ULX"
+	"version"	"1.0"
+	"up_date"	"2nd Dec 2009"
+	"author_name"	"Seth"
+	"author_email"	"owner@diamondbuild.info"
+	"author_url"	"http://www.diamondbuild.info"
+	"info"		"Adds an give weapon command to ULX"
+}

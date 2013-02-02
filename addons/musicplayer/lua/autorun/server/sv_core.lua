@@ -1,0 +1,21 @@
+-- Sounds!
+
+   resource.AddFile("sound/music/nyan.mp3")
+   resource.AddFile("sound/music/rickroll.mp3")
+   resource.AddFile("sound/music/ihadsex.mp3")
+   resource.AddFile("sound/music/ikillyou.mp3")
+   resource.AddFile("sound/music/friday.mp3")
+   resource.AddFile("sound/music/baby.mp3")
+   resource.AddFile("sound/music/littlegirls.mp3")
+   resource.AddFile("sound/music/ducks.mp3")
+   resource.AddFile("sound/music/okaytobegay.mp3")
+   resource.AddFile("sound/music/007.mp3")
+   resource.AddFile("sound/music/bulletproof.mp3")
+   resource.AddFile("sound/music/titanium.mp3")
+   resource.AddFile("sound/music/xmas/merryxmas.mp3")
+   resource.AddFile("sound/music/xmas/alliwantxmas.mp3")
+   resource.AddFile("sound/music/xmas/walkingxmas.mp3")
+   resource.AddFile("sound/music/xmas/walkingaroundxmastree.mp3")
+   resource.AddFile("sound/music/uhoh.mp3")
+   resource.AddFile("sound/music/racistcoffe.mp3")
+   
