@@ -31,7 +31,7 @@ SWEP.CanBuy = {ROLE_TRAITOR}
 SWEP.ViewModel			= "models/weapons/v_eq_smokegrenade.mdl"
 SWEP.WorldModel			= "models/weapons/w_eq_smokegrenade.mdl"
 SWEP.Weight			= 5
-SWEP.AutoSpawnable      = true
+SWEP.AutoSpawnable      = false
 -- really the only difference between grenade weapons: the model and the thrown
 -- ent.
 
