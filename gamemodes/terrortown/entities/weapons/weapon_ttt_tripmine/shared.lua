@@ -28,7 +28,7 @@ SWEP.Base = "weapon_tttbase"
     SWEP.WorldModel                         = "models/weapons/w_slam.mdl"   -- Weapon world model
     SWEP.FiresUnderwater = false
      
-    SWEP.Primary.Sound                      = Sound("")             -- Script that calls the primary fire sound
+    SWEP.Primary.Sound                      = Sound('ambient/water/drip"..math.random(1, 4)..".wav')             -- Script that calls the primary fire sound
     SWEP.Primary.Delay                      = .5                    -- This is in Rounds Per Minute
     SWEP.Primary.ClipSize                   = 5             -- Size of a clip
     SWEP.Primary.DefaultClip                = 5             -- Bullets you start with

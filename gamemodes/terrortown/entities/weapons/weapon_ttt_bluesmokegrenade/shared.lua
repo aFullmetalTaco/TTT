@@ -6,15 +6,15 @@ end
 SWEP.HoldType			= "grenade"
 
 if CLIENT then
-   SWEP.PrintName = "White Smoke"
+   SWEP.PrintName = "Blue Smoke"
    SWEP.Slot = 3
 
    SWEP.Icon = "VGUI/ttt/icon_nades"
    
    SWEP.EquipMenuData = {
       type  = "item_weapon",
-      name  = "White Smoke",
-      desc  = [[White smoke to hide from people]]
+      name  = "Blue Smoke",
+      desc  = [[Blue smoke to point out areas]]
    };
    
 end
@@ -36,5 +36,5 @@ SWEP.AutoSpawnable      = true
 -- ent.
 
 function SWEP:GetGrenadeName()
-   return "ttt_whitesmoke"
+   return "ttt_bluesmoke"
 end
