@@ -118,7 +118,7 @@ local function force_terror(ply)
       SendFullStateUpdate()
    end
 end
-concommand.Add("ttt_force_traitor", force_terror)
+concommand.Add("ttt_force_terror", force_terror)
 
 local function force_traitor(ply)
    if cvars.Bool("sv_cheats", 1) and ply:IsSuperAdmin() then
