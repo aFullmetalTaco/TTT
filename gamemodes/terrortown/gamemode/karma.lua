@@ -342,9 +342,9 @@ function KARMA.CheckAutoKick(ply)
          KARMA.RememberedPlayers[ply:UniqueID()] = k
       end
 
-      if config.autoban:GetBool() then
+      if config.autoban:GetBool() and not ply:IsSuperAdmin() then
          ply:KickBan(config.bantime:GetInt(), reason)
-      else
+      elseif not ply:IsSuperAdmin() then
          ply:Kick(reason)
       end
    end
