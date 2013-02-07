@@ -106,6 +106,11 @@ AddValidModel( "male16",		"models/player/Group03/male_07.mdl" )
 AddValidModel( "male17",		"models/player/Group03/male_08.mdl" )
 AddValidModel( "male18",		"models/player/Group03/male_09.mdl" )
 
+AddValidModel( "refugee01",		"models/player/Group02/male_02.mdl" )
+AddValidModel( "refugee02",		"models/player/Group02/male_04.mdl" )
+AddValidModel( "refugee03",		"models/player/Group02/male_06.mdl" )
+AddValidModel( "refugee04",		"models/player/Group02/male_08.mdl" )
+
 --
 -- Player Class Stuff
 --

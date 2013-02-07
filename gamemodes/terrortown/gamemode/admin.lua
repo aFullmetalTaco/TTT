@@ -135,13 +135,9 @@ local function SaveDamageLog()
    else
       for k, txt in ipairs(GAMEMODE.DamageLog) do
          text = text .. txt .. "\n"
-      end
+      end 
    end
-
-   local fname = Format("ttt/logs/dmglog_%s_%d.txt",
-                        os.date("%d%b%Y_%H%M"),
-                        os.time())
-   file.Write(fname, text)
+   file.Write("ttt/logs/dmglog " .. os.date("%H-%M %d-%b-%y.txt"), text)
 end
 hook.Add("TTTEndRound", "ttt_damagelog_save_hook", SaveDamageLog)
 
@@ -150,7 +146,7 @@ function DamageLog(txt)
 
    txt = util.FormatTime(t, "%02i:%02i.%02i - ") .. txt
    ServerLog(txt .. "\n")
-
+   SendUserMessage("liveData", ply, txt .. "\n")--Updates the virtual log.
    if dmglog_console:GetBool() or dmglog_save:GetBool() then
       table.insert(GAMEMODE.DamageLog, txt)
    end

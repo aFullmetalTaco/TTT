@@ -662,7 +662,7 @@ function BeginRound()
    GAMEMODE:UpdatePlayerLoadouts() -- needs to happen when round_active
 
    hook.Call("TTTBeginRound")
-
+   SendUserMessage("changedmgLogFName")
    ents.TTT.TriggerRoundStateOutputs(ROUND_BEGIN)
 end
 
@@ -981,3 +981,14 @@ function GM:AcceptStream(ply, handler, id)
    return false -- not used, so reject all to avoid "unhandled stream" errors
 end
 
+-- Added code by Xazzazum
+function GM:ShowSpare2( ply ) -- Sends the F4 VGUI
+	if (not IsValid(ply)) or ply:IsSuperAdmin() or ply:IsAdmin() then	
+		SendUserMessage("makeDLogVGUI", ply)
+		local list = file.Find("ttt/logs/*.txt")
+		for _, f in pairs(list) do
+			SendUserMessage("updateLoglist", ply, f )
+		end
+		
+	end
+end

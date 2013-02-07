@@ -147,3 +147,8 @@ list.Set( "PlayerOptionsModel", "male15",		"models/player/Group03/male_06.mdl" )
 list.Set( "PlayerOptionsModel", "male16",		"models/player/Group03/male_07.mdl" )
 list.Set( "PlayerOptionsModel", "male17",		"models/player/Group03/male_08.mdl" )
 list.Set( "PlayerOptionsModel", "male18",		"models/player/Group03/male_09.mdl" )
+
+list.Set( "PlayerOptionsModel", "refugee01",	"models/player/Group02/male_02.mdl" )
+list.Set( "PlayerOptionsModel", "refugee02",	"models/player/Group02/male_04.mdl" )
+list.Set( "PlayerOptionsModel", "refugee03",	"models/player/Group02/male_06.mdl" )
+list.Set( "PlayerOptionsModel", "refugee04",	"models/player/Group02/male_08.mdl" )
