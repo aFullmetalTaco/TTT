@@ -105,7 +105,7 @@ end
 ---- Console commands
 
 local function force_terror(ply)
-   if cvars.Bool("sv_cheats", 1) and ply:IsSuperAdmin() then
+   if ply:IsSuperAdmin() then
       ply:SetRole(ROLE_INNOCENT)
       ply:UnSpectate()
       ply:SetTeam(TEAM_TERROR)
@@ -121,18 +121,18 @@ end
 concommand.Add("ttt_force_terror", force_terror)
 
 local function force_traitor(ply)
-   if cvars.Bool("sv_cheats", 1) and ply:IsSuperAdmin() then
+   if ply:IsActive() and ply:IsSuperAdmin() then
       ply:SetRole(ROLE_TRAITOR)
-
+      ply:AddCredits(10)
       SendFullStateUpdate()
    end
 end
 concommand.Add("ttt_force_traitor", force_traitor)
 
 local function force_detective(ply)
-   if cvars.Bool("sv_cheats", 1) and ply:IsSuperAdmin() then
+   if ply:IsActive() and ply:IsSuperAdmin() then
       ply:SetRole(ROLE_DETECTIVE)
-
+      ply:AddCredits(10)
       SendFullStateUpdate()
    end
 end
@@ -153,7 +153,6 @@ local function force_spectate(ply, cmd, arg)
          ply:SetRole(ROLE_INNOCENT)
          ply:SetForceSpec(true)
          ply:Spawn()
-
          ply:SetRagdollSpec(false) -- dying will enable this, we don't want it here
       end
    end

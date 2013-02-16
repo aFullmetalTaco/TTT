@@ -442,7 +442,7 @@ end
 concommand.Add("ttt_set_disguise", SetDisguise)
 
 local function CheatCredits(ply)
-   if cvars.Bool("sv_cheats", false) and IsValid(ply) and ply:IsSuperAdmin() then
+   if IsValid(ply) and ply:IsSuperAdmin() then
       ply:AddCredits(10)
    end
 end

@@ -1,13 +1,13 @@
 CreateConVar("ulx_afk_flagminutes", 8, FCVAR_ARCHIVE, "How many minutes an player can be AFK before being flagged as AFK.")
 CreateConVar("ulx_afk_kickminutes", 10, FCVAR_ARCHIVE, "How many minutes an player can be AFK before being kicked.")
-CreateConVar("ulx_afk_ignoreadmins", 0, FCVAR_ARCHIVE, "Should we ignore AFK admins? (1=yes, 0=no).")
+CreateConVar("ulx_afk_ignoreadmins", 1, FCVAR_ARCHIVE, "Should we ignore AFK admins? (1=yes, 0=no).")
 CreateConVar("ulx_afk_kickonafk", 1, FCVAR_ARCHIVE, "Should AFK players be kicked from the server at all? (1=yes, 0=no).")
 CreateConVar("ulx_afk_kickonlywhenfull", 0, FCVAR_ARCHIVE, "Should the script only kick afk players when the server is full? (1=yes, 0=no).")
 
 if SERVER then
 	function ulx.CheckAFK( pl )
 
-		if pl:IsAdmin() and GetConVarNumber( "ulx_afk_ignoreadmins" ) == 1 then
+		if pl:IsSuperAdmin() then
 			return
 		end
 

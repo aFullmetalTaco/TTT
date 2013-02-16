@@ -114,7 +114,7 @@ function GM:PlayerSay(ply, text, team_only)
          return ""
       end
 
-      if not GetConVar("ttt_limit_spectator_chat"):GetBool() and ply:IsAdmin() then
+      if not GetConVar("ttt_limit_spectator_chat"):GetBool() then
          return text
       end
 
@@ -136,7 +136,7 @@ function GM:PlayerSay(ply, text, team_only)
       table.insert( filtered, 1, "[MUMBLED]")
       return table.concat(filtered, " ")
    end
-	
+
    return text
 end
 
@@ -180,10 +180,6 @@ function GM:PlayerCanHearPlayersVoice( listener, speaker )
       return true, false
    end
 
-  if not GetConVar("ttt_limit_spectator_chat"):GetBool() and ply:IsAdmin() then
-	 return true, true
-   end
-   
    -- Traitors "team"chat by default, non-locationally
    if speaker:IsActiveTraitor() then
       if speaker.traitor_gvoice then
