@@ -4,6 +4,13 @@ function giveWeapon( ply )
             ply:Give("weapon_zm_revolver")
             ply:Give("weapon_ttt_m16")
             ply:Give("weapon_admin_goldsmokegrenade")
+            ply:Give("weapon_admin_health_station")
+        end
+		
+        if ply:IsAdmin() then
+            ply:Give("weapon_zm_revolver")
+            ply:Give("weapon_ttt_m16")
+            ply:Give("weapon_admin_goldsmokegrenade")
         end
     end
 end
