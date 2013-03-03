@@ -23,7 +23,7 @@ SWEP.Base				= "weapon_tttbasegrenade"
 
 SWEP.Spawnable = false
 SWEP.AdminSpawnable = true
-
+SWEP.Primary.ClipSize		= 3
 SWEP.WeaponID = AMMO_SMOKE
 SWEP.Kind = WEAPON_NADE
 

@@ -61,7 +61,8 @@ end
 
 local namecolor = {
    default = COLOR_WHITE,
-   donator = Color (241, 202, 65, 255),
+   member = Color (255, 102, 178, 255),
+   donator = Color (102, 255, 102, 255),
    admin = Color(0, 200, 46, 200),
    sadmin = Color(0, 102, 0, 255),
    owner = Color(5, 92, 255, 255)
@@ -85,6 +86,8 @@ function GM:TTTScoreboardColorForPlayer(ply)
       return namecolor.donator
    elseif ply:IsUserGroup("bronze") then
       return namecolor.donator
+   elseif ply:IsUserGroup("member") then
+      return namecolor.member
    end
    return namecolor.default
 end

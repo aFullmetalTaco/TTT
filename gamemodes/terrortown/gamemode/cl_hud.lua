@@ -150,9 +150,9 @@ local function PunchPaint(client)
    local y = margin/2 + height
    
    local punchhelp=L.punch_help
-   if LocalPlayer():IsAdmin() then
+   if client:IsAdmin() or client:IsUserGroup("platinum") then  
 	punch=x
-	punchhelp="You're an admin! Unlimited punch bonanza!"
+	punchhelp="You're an admin or platinum donator! Unlimited punch bonanza!"
    end
 
    PaintBar(x, y, width, height, ammo_colors, punch)
@@ -164,12 +164,21 @@ local function PunchPaint(client)
    dr.SimpleText(punchhelp, "TabLarge", ScrW() / 2, margin, COLOR_WHITE, TEXT_ALIGN_CENTER)
 
    local bonus = client:GetNWInt("bonuspunches", 0)
+   
+   local bonusAddText=""
+   if client:IsUserGroup("bronze") then
+	  bonusAddText=" (Bronze donator grants +2 punch.)"
+   elseif client:IsUserGroup("silver") then
+	  bonusAddText=" (Silver donator grants +4 punch.)"
+   elseif client:IsUserGroup("gold") then
+	  bonusAddText=" (Gold donator grants +10 punch.)"
+   end
    if bonus != 0 then
       local text
       if bonus < 0 then
-         text = interp(L.punch_bonus, {num = bonus})
+         text = interp(L.punch_bonus..bonusAddText, {num = bonus})
       else
-         text = interp(L.punch_malus, {num = bonus})
+         text = interp(L.punch_malus..bonusAddText, {num = bonus})
       end
 
       dr.SimpleText(text, "TabLarge", ScrW() / 2, y * 2, COLOR_WHITE, TEXT_ALIGN_CENTER)
