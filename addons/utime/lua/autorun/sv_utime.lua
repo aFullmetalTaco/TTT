@@ -16,13 +16,13 @@ function onJoin( ply )
 
 	if row then
 		if utime_welcome:GetBool() then
-			ULib.tsay( ply, "[UTime]Welcome back " .. ply:Nick() .. ", you last played on this server " .. os.date( "%c", row.lastvisit ) )
+			ULib.tsay( ply, "Welcome back " .. ply:Nick() .. ", you last played on this server " .. os.date( "%c", row.lastvisit ) )
 		end
 		sql.Query( "UPDATE utime SET lastvisit = " .. os.time() .. " WHERE player = " .. uid .. ";" )
 		time = row.totaltime
 	else
 		if utime_welcome:GetBool() then
-			ULib.tsay( ply, "[UTime]Welcome to our server " .. ply:Nick() .. "!" )
+			ULib.tsay( ply, "Welcome to our server " .. ply:Nick() .. "!" )
 		end
 		sql.Query( "INSERT into utime ( player, totaltime, lastvisit ) VALUES ( " .. uid .. ", 0, " .. os.time() .. " );" )
 	end

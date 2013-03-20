@@ -4,14 +4,14 @@ function giveWeapon( ply )
 		if ply:IsUserGroup("owner") then
             ply:Give("weapon_zm_revolver")
             ply:Give("weapon_ttt_m16")
-            ply:Give("weapon_admin_goldsmokegrenade")
+            ply:Give("weapon_admin_bluesmokegrenade")
             ply:Give("weapon_admin_health_station")
 		end
 		
         if ply:IsSuperAdmin() then
             ply:Give("weapon_zm_revolver")
             ply:Give("weapon_ttt_m16")
-            ply:Give("weapon_admin_goldsmokegrenade")
+            ply:Give("weapon_admin_pinksmokegrenade")
             ply:Give("weapon_admin_health_station")
         end
 		

@@ -21,18 +21,19 @@
 --//////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////--
 
 -- This is our end of round music
-resource.AddFile("sound/innocentswin.mp3")
+resource.AddFile("sound/inwinforthewin.mp3")
+resource.AddFile("sound/stalemate.mp3")
 resource.AddFile("sound/traitorswin.mp3")
 
 local function PlayMusic(wintype)
    if wintype == WIN_INNOCENT then
-      BroadcastLua('surface.PlaySound("innocentswin.mp3")')
+      BroadcastLua('surface.PlaySound("inwinforthewin.mp3")')
 
    elseif wintype == WIN_TRAITOR then
       BroadcastLua('surface.PlaySound("traitorswin.mp3")')
 
    elseif wintype == WIN_TIMELIMIT then
-      BroadcastLua('surface.PlaySound("innocentswin.mp3")')
+      BroadcastLua('surface.PlaySound("stalemate.mp3")')
    end
 end
 hook.Add("TTTEndRound", "MyMusic", PlayMusic)
